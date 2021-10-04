@@ -44,10 +44,32 @@ function processPhrase(){
 }
 </script>
 <div class="container">
-    <img src="night.jpg" height="200" width="200" onclick="newImage()" alt="image">
+    <img src="night.jpg" height="200" width="200" onclick="newImage()" id="img" alt="image">
     <script>
+        var usingImage=1
         function newImage(){
-            var usingImage=1
+            out=document.getElementById("img")
+            switch(usingImage){
+                case 1:
+                    out.src="night.jpg"
+                    usingImage=usingImage+1
+                    break;
+                case 2:
+                    out.src="vult.jpg"
+                    usingImage=usingImage+1
+                    break;
+                case 3:
+                    out.src="Sha.jpg"
+                    usingImage=1
+                    break;
+                default:
+                    out.src="Sha.jpg"
+
+
+
+                
+            }
+            
         }
     </script>
 </div>
