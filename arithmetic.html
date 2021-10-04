@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+ <title>mathCaluculation</title>
+<body>
+
+<h2>Narendra Unnava Computes</h2>
+
+<form>
+    <label for="get_base">Enter a base</label>
+    <input type ="number" id="base" name="get_base" value=10> <br>
+
+    <label for="get_exp">Enter an exponent</label>
+    <input type ="number" id="expo" name="exponent" value=2> <br>
+
+    <input type="button" onclick="powers()" value="Compute">
+</form>
+
+
+<p id="result"> </p>
+
+<script> 
+
+function powers(){
+    result=""
+    console.log("Getting form values")
+    bas = document.getElementById("base").value
+    exp = document.getElementById("expo").value  
+    
+    for(let i=1;i<=exp;i++){
+        result=result+" "+Math.pow(bas,i)
+
+    }
+    
+    out = document.getElementById("result")
+    out.innerHTML = result
+}
+
+</script>
+
+</body>
+</html> 
