@@ -21,10 +21,10 @@
 <p id="result">This text will be replaced </p>
 
 <script> 
-
+let correct=0;
+let wrong =0;
 function processPhrase(){
-    let correct=0;
-    let wrong =0;
+    
     console.log("Getting form values")
     pass = document.getElementById("secret_phrase").value
     phrase = document.getElementById("check").value
@@ -43,6 +43,14 @@ function processPhrase(){
     out.innerHTML = "<h3>correct</h3>"+correct+"<br>"+"<h3>wrong</h3>"+wrong
 }
 </script>
+<div class="container">
+    <img src="night.jpg" height="200" width="200" onclick="newImage()" alt="image">
+    <script>
+        function newImage(){
+            var usingImage=1
+        }
+    </script>
+</div>
 
 </body>
 </html> 
