@@ -37,25 +37,25 @@ function powers(){
 
 </script>
 <form>
-    <input type="checkbox" onclick="processRadio()" id="add" name="topping1"   
+    <input type="radio" onclick="processRadio()" id="add" name="topping"   
       value="plus">
     <label for="+">+</label></br>
   
-    <input type="checkbox" onclick="processRadio()" id="subtract" name="topping2" 
+    <input type="radio" onclick="processRadio()" id="subtract" name="topping" 
        value="minus">
     <label for="-">-</label></br>
   
-    <input type="checkbox" onclick="processRadio()" id="multiply" name="topping3"   
+    <input type="radio" onclick="processRadio()" id="multiply" name="topping"   
        value="times">
     <label for="*">*</label></br>
 
-    <input type="checkbox" onclick="processRadio()" id="divide" name="topping4"   
+    <input type="radio" onclick="processRadio()" id="divide" name="topping"   
        value="divide">
     <label for="/">/</label></br>
 
     
   </form>
-  <p id="res">This text will be replaced </p>
+  <p id="res"></p>
   <script>
       function processRadio(){
       bas = document.getElementById("base").value
