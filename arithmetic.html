@@ -36,6 +36,48 @@ function powers(){
 }
 
 </script>
+<form>
+    <input type="checkbox" onclick="processRadio()" id="add" name="topping1"   
+      value="plus">
+    <label for="+">+</label></br>
+  
+    <input type="checkbox" onclick="processRadio()" id="subtract" name="topping2" 
+       value="minus">
+    <label for="-">-</label></br>
+  
+    <input type="checkbox" onclick="processRadio()" id="multiply" name="topping3"   
+       value="times">
+    <label for="*">*</label></br>
+
+    <input type="checkbox" onclick="processRadio()" id="divide" name="topping4"   
+       value="divide">
+    <label for="/">/</label></br>
+
+    
+  </form>
+  <p id="res">This text will be replaced </p>
+  <script>
+      function processRadio(){
+      bas = document.getElementById("base").value
+      exp = document.getElementById("expo").value
+      ou = document.getElementById("res")
+      if(document.getElementById("add").checked){
+          let z=+bas+ +exp;
+          ou.innerHTML=z
+      }
+      else if(document.getElementById("subtract").checked){
+          ou.innerHTML=bas-exp
+      }
+      else if(document.getElementById("multiply").checked){
+          ou.innerHTML=bas*exp
+      }
+      else if(document.getElementById("divide").checked){
+          ou.innerHTML=bas/exp
+      }
+    }
+
+      
+  </script>
 
 </body>
 </html> 
