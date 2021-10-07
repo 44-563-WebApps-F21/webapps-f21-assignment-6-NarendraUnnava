@@ -23,21 +23,26 @@
 <script> 
 let correct=0;
 let wrong =0;
-function processPhrase(){
-    
+function processPhrase(){    
     console.log("Getting form values")
     pass = document.getElementById("secret_phrase").value
     phrase = document.getElementById("check").value
-    confirmed = confirm("Are these the values? "+pass+" and "+phrase)
+    let count=0
     if(pass==phrase){
         correct=correct+1
         alert("Access allowed")
-
     }
     else{
-        wrong=wrong+1
-        alert("Access denied")
+        if(wrong<3){
+             wrong=wrong+1
+             alert("Access denied")            
+            }
+        else {
+            alert("Account blocked")
+            
+        }
     }
+    
     
     out = document.getElementById("result")
     out.innerHTML = "<h3>correct</h3>"+correct+"<br>"+"<h3>wrong</h3>"+wrong
